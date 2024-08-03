@@ -6,14 +6,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const newsRouter = require('./routes/news');
 const getArticlesRouter = require('./routes/getArticles');
-const authRouter = require('./routes/auth'); // Import the auth routes
+const authRouter = require('./routes/auth'); 
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Connect to MongoDB
 const connectDB = async () => {
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
@@ -32,12 +31,10 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use('/api/news', newsRouter);
 app.use('/api/get-articles', getArticlesRouter);
 app.use('/api/auth', authRouter); // Add the auth routes
 
-// Schedule cron job to fetch news every hour
 cron.schedule('0 * * * *', async () => {
     try {
         await axios.get('http://localhost:5000/api/news/fetch');
