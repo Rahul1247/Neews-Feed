@@ -2,17 +2,19 @@
 Welcome to News-feedly! This project is a modern news aggregation web application that allows users to stay updated with the latest news from various sources. Built using Angular for the frontend and Node.js with Express.js for the backend, News-feedly provides a seamless experience for discovering and managing news articles.
 
 ## Features
-User Authentication: Secure login and signup using Passport.js, with user-specific news views.
-News Aggregation: Fetches and displays news articles from a variety of sources.
-Search Functionality: Find news articles quickly with a robust search feature.
-Source Filtering: Customize news feeds based on preferred sources.
-MongoDB Integration: Stores user data and fetched news articles.
-Technologies Used
-Frontend: Angular
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: Passport.js
-API: News API for fetching news articles
+**User Authentication:** Secure login and signup using Passport.js, with user-specific news views.
+**News Aggregation:** Fetches and displays news articles from a variety of sources.
+**Search Functionality:** Find news articles quickly with a robust search feature.
+**Source Filtering:** Customize news feeds based on preferred sources.
+**MongoDB Integration:** Stores user data and fetched news articles.
+  
+
+## Technologies Used
+**Frontend:** Angular
+**Backend:** Node.js, Express.js
+**Database:** MongoDB
+**Authentication:** Passport.js
+**API:** News API for fetching news articles
 
 ## Project Structure
 
