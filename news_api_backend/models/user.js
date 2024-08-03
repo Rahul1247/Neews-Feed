@@ -13,7 +13,6 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-// Password hashing middleware
 UserSchema.pre('save', async function(next) {
     if (!this.isModified('password')) {
         return next();
@@ -27,7 +26,6 @@ UserSchema.pre('save', async function(next) {
     }
 });
 
-// Method to compare entered password with hashed password
 UserSchema.methods.matchPassword = async function(enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
